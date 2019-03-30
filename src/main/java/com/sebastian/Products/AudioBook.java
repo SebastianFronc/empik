@@ -1,4 +1,4 @@
-package com.sebastian;
+package com.sebastian.Products;
 
 import java.math.BigDecimal;
 
