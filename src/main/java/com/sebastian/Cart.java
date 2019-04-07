@@ -2,10 +2,11 @@ package com.sebastian;
 import com.sebastian.Products.Product;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Cart {
-    private List<Product>  cart;
+    private List<Product>  cart = new ArrayList<>();
 
    public void addProduct(Product product){
        cart.add(product);
@@ -34,10 +35,13 @@ public class Cart {
     }
 
     public BigDecimal getFinalPrice(){
+       BigDecimal finalPrace;
        BigDecimal discount = this.getAmountWithDiscount()
-               .divide(BigDecimal.valueOf(100)).setScale(0, BigDecimal.ROUND_DOWN).multiply(BigDecimal.valueOf(5));
-       discount = BigDecimal.valueOf(100).subtract(discount).divide(BigDecimal.valueOf(100));
-       return this.getAmountWithDiscount().multiply(discount);
+               .divide(BigDecimal.valueOf(100))
+               .setScale(0,BigDecimal.ROUND_DOWN)
+               .multiply(BigDecimal.valueOf(5));
+       finalPrace = this.getAmountWithDiscount().subtract(discount);
+       return finalPrace;
     }
 
    public BigDecimal getCartValue(){

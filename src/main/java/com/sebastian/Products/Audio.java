@@ -11,7 +11,7 @@ public class Audio  extends Product{
     private final List<Track> track;
 
     public Audio(long id, String name, BigDecimal price, Discount discount, LocalDate publishmentDate, List<Track> track) {
-        super(id, name, price, discount);
+        super(id, name, price, discount, "AUDIO");
         this.publishmentDate = publishmentDate;
         this.track = track;
     }

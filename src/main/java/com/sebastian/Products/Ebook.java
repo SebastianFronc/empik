@@ -9,7 +9,7 @@ public class Ebook extends Book{
     private final List<String> supportedFortmats;
 
     public Ebook(long id, String name, BigDecimal price, Discount discount, String author, int pageCounter, List<String> supportedFortmats) {
-        super(id, name, price, discount, author, pageCounter);
+        super(id, name, price, discount, "EBOOK", author, pageCounter);
         this.supportedFortmats = supportedFortmats;
     }
 

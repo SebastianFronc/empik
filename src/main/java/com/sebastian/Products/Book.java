@@ -8,8 +8,8 @@ public abstract class Book extends Product {
     private final String author;
     private final int pageCounter;
 
-    public Book(long id, String name, BigDecimal price, Discount discount, String author, int pageCounter) {
-        super(id, name, price, discount);
+    public Book(long id, String name, BigDecimal price, Discount discount, String category, String author, int pageCounter) {
+        super(id, name, price, discount, category);
         this.author = author;
         this.pageCounter = pageCounter;
     }

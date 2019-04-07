@@ -8,7 +8,7 @@ public class AudioBook extends Book {
     int duration;
 
     public AudioBook(long id, String name, BigDecimal price, Discount discount, String author, int pageCounter, int duration) {
-        super(id, name, price, discount, author, pageCounter);
+        super(id, name, price, discount, "AUDIOBOOK", author, pageCounter);
         this.duration = duration;
     }
 

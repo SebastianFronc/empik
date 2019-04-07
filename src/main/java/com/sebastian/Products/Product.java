@@ -12,13 +12,14 @@ public abstract class Product {
     private final String name;
     private final BigDecimal price;
     private  Discount discount;
-  
+    private final String category;
 
-    public Product(long id, String name, BigDecimal price, Discount discount) {
+    public Product(long id, String name, BigDecimal price, Discount discount, String category) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.discount = discount;
+        this.category = category;
     }
 
     public long getId() {
@@ -43,5 +44,9 @@ public abstract class Product {
 
     public void setDiscount(Discount discount) {
         this.discount = discount;
+    }
+
+    public String getCategory() {
+        return category;
     }
 }
